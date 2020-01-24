@@ -1,0 +1,29 @@
+<h1>Add Pizza to Cart</h1>
+<h2>Add any pizza from the menu</h2>
+<a class="backButton" href="/orders/all">Back</a>
+<hr />
+<div class="formWrapper1">
+  <form id="ordersCreate" action="/api/carts" method="POST">
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <table id="menuTable">
+        <tr>
+          <th>Pizza</th>
+          <th>Cost (per slice)</th>
+          <th>Amount</th>
+          <th>Total Cost</th>
+        </tr>
+        <tr>
+          <td id="totalOrderPrice" colspan="5">Total Order Price: 0$</td>
+        </tr>
+        <tr id="noOrdersMessage">
+          <td colspan="5">You have no orders!</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Proceed to checkout</button>
+    </div>
+  </form>
+</div>

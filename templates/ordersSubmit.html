@@ -1,0 +1,35 @@
+<h1>Check Details</h1>
+<hr />
+
+<h2>Validate your order details</h2>
+
+<div class="formWrapper">
+  <form id="ordersSubmit" action="/api/orders" method="POST">
+    <input type="hidden" name="_method" value="POST"/>
+    <div class="formError"></div>
+    <div class="formSuccess">Your Order Have Been Processed Successfully</div>
+    <input class="hiddenIdInput" type="hidden" name="uid" />
+    <div class="inputWrapper">
+      <table id="cartTable">
+
+      </table>
+    </div>
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Submit</button>
+    </div>
+  </form>
+</div>
+
+<hr />
+<h2>Delete The Cart</h2>
+<div class="formWrapper">
+  <form id="cartDelete" action="/api/carts" method="DELETE">
+    <input type="hidden" name="_method" value="DELETE"/>
+    <div class="formError"></div>
+    <div class="warning">Warning: This action cannot be undone!</div>
+    <input class="hiddenIdInput" type="hidden" name="uid" />
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta red">Delete</button>
+    </div>
+  </form>
+</div>
